@@ -167,7 +167,7 @@ class _VideoDownloaderPageState extends State<VideoDownloaderPage>
     try {
       final response = await http.post(
         Uri.parse(
-            "https://web-production-96da.up.railway.app/download_instagram"),
+            "https://web-production-96da.up.railway.app/download_instagram_login"),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({"url": postUrl}),
       );
