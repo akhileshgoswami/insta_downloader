@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'dart:io' show File; // for mobile platforms only
 
+// import 'package:demoisolate/extract_video_url.dart';
+import 'package:demoisolate/url_extracter.dart/url_finder.dart';
 import 'package:demoisolate/videoplayer.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -271,6 +273,8 @@ class _VideoDownloaderPageState extends State<VideoDownloaderPage>
     });
     try {
       await extractVideoUrl(inputUrl);
+      // String ? url = await extractInstagramVideoUrl(inputUrl);
+      // print(url);
     } catch (e) {
       setState(() {
         _statusMessage = 'Error: $e';
